@@ -1,0 +1,247 @@
+//
+// Checkbox, Radio button
+//
+
+//
+// Checkbox
+//
+input[type=checkbox] {
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+
+    & + label {
+        position: relative;
+        display: inline-block;
+        vertical-align: top;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        color: #252d36;
+        line-height: inherit;
+        text-align: left;
+        font-weight: 300;
+        cursor: pointer;
+
+        &:before {
+            content: "\e90a";
+            color: #d7d7d7;
+            font-family: 'iguazio';
+            background-color: #ffffff;
+            display: inline-block;
+            margin: 0 7px 0 0;;
+            padding: 0;
+            height: 14px;
+            width: 14px;
+            font-size: 14px;
+            line-height: 1;
+        }
+
+        &.empty {
+            width: 0;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    // Checked
+    &:checked {
+        & + label {
+            &:before {
+                content: "\e90c";
+                color: #00c9ff;
+            }
+        }
+    }
+}
+
+//
+// Radio button
+//
+input[type=radio] {
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+
+    & + label {
+        cursor: pointer;
+        display: block;
+        font-weight: normal;
+        margin: 0;
+        padding-left: 25px;
+        position: relative;
+        text-align: left;
+
+        &:before {
+            content: "";
+            display: inline-block;
+            left: 0;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 6px;
+        }
+
+        &.empty {
+            width: 0;
+            padding: 0;
+            margin: 0;
+        }
+    }
+}
+
+// blue
+input[type=radio] {
+    &.blue {
+        & + label {
+            color: #3d5b77;
+            font-size: 14px;
+            line-height: 30px;
+
+            &:before {
+                background: url("/assets/images/inputs/blue_radio_unchecked.png") no-repeat left;
+                background-size: 16px 16px;
+                height: 16px;
+                width: 16px;
+                top: 6px;
+            }
+        }
+    }
+
+    &:checked {
+        &.blue {
+            & + label {
+                &:before {
+                    background: url("/assets/images/inputs/blue_radio_checked.png") no-repeat left;
+                    background-size: 16px 16px;
+                    height: 16px;
+                    width: 16px;
+                    top: 6px;
+                }
+            }
+        }
+    }
+}
+
+// Fix Bootstrap ui glitch at Firefox
+input[type="radio"][disabled],
+input[type="checkbox"][disabled] {
+    display: none;
+}
+
+@media @retina-display {
+    input[type=radio].blue + label:before {
+        background: url("/assets/images/inputs/blue_radio_unchecked@2x.png") no-repeat left;
+        background-size: 16px 16px;
+        height: 16px;
+        width: 16px
+    }
+
+    input[type=radio]:checked.blue + label:before {
+        background: url("/assets/images/inputs/blue_radio_checked@2x.png") no-repeat left;
+        background-size: 16px 16px;
+        height: 16px;
+        width: 16px
+    }
+}
+
+// Regular text-input
+input.igz-text-input {
+    color: #000;
+    font-size: 13px;
+    font-weight: 400;
+    height: 30px;
+    line-height: 30px;
+    border: 1px solid #dedede;
+    outline: 0;
+    padding: 0 10px 1px 10px;
+    vertical-align: middle;
+    width: 100%;
+    position: relative;
+
+    &.no-underline:focus {
+        border: 1px solid #dedede;
+    }
+
+    &:focus {
+        border-bottom: 2px solid #5a82a2;
+    }
+
+    &.input-invalid {
+        border-bottom: 2px solid #e4365f;
+    }
+}
+
+input[disabled] {
+    background-color: white;
+    opacity: 0.5;
+}
+
+// Number + Measurement select combo input
+.igz-combo-input-dropdown {
+    position: relative;
+    height: 30px;
+
+    .igz-combo-input {
+        position: absolute;
+        left: 0;
+        width: 100%;
+    }
+
+    .igz-combo-dropdown {
+        position: absolute;
+        top: 1px;
+        right: 1px;
+        width: 50px;
+
+        .default-dropdown-field {
+            border: 0;
+        }
+    }
+
+    .combo-status-line {
+        position: absolute;
+        z-index: 5;
+        bottom: 0;
+        height: 2px;
+        width: 100%;
+        background-color: transparent;
+
+        &.invalid {
+            background-color: #e3375f;
+        }
+    }
+}
+
+//
+// Validation messages
+//
+
+.input-invalid {
+    border-color: #ea674d;
+}
+
+.error-text {
+    color: #e3375f;
+    font-size: 12px;
+    line-height: 1;
+    margin-top: 2px;
+    position: absolute;
+
+    &.top-placed {
+        top: -14px;
+    }
+}
+
+.error-relative {
+    position: relative;
+}
+
+.asterisks {
+    color: #e4365f;
+    font-size: 16px;
+    font-weight: 400;
+    padding-left: 2px;
+}

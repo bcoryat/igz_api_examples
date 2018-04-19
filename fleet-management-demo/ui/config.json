@@ -1,0 +1,17 @@
+{
+  "baseUrl": "http://10.90.1.102:8081/1/vin",
+  "trucksTable": "data",
+  "histogramTable": "meta",
+  "refreshDelay": 5000,
+  "weather": {
+    "sunny": "clear",
+    "rainy": "rain",
+    "cloudy": "clouds",
+    "snowy": "snow",
+    "stormy": "storm"
+  },
+  "heatmap": {
+    "radius": 30,
+    "blur": 20
+  }
+}

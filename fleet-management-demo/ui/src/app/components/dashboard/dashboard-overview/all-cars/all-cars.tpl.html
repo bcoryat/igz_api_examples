@@ -1,0 +1,42 @@
+<div class="all-cars">
+    <div class="title-filter-headers">
+        <div class="clearfix">
+            <h3 class="pull-left">All vehicles</h3>
+            <div class="pull-right">
+                <div class="filter-alarm pull-right">
+                    <input type="checkbox" id="alarms-only" class="blue" data-ng-model="allCars.showAlarmsOnly">
+                    <label for="alarms-only" class="label">Bad weather<span class="icon-font-critical"></span></label>
+                </div>
+            </div>
+        </div>
+        <div class="igz-row headers">
+            <div class="igz-col-{{::allCars.columnWidths.vin}} cell">VIN</div>
+            <div class="igz-col-{{::allCars.columnWidths.t}} cell">Last updated</div>
+            <div class="igz-col-{{::allCars.columnWidths.csp}} cell" tooltip="(km/h)" data-tooltip-placement="top">Speed</div>
+            <div class="igz-col-{{::allCars.columnWidths.rpm}} cell">RPM</div>
+            <div class="igz-col-{{::allCars.columnWidths.cfc}} cell"  tooltip="(g/rev)" data-tooltip-placement="top">Fuel</div>
+            <div class="igz-col-{{::allCars.columnWidths.weather}} cell">Weather</div>
+        </div>
+    </div>
+<div class="list-container">
+        <div data-ng-if="(allCars.cars | filter:allCars.filterCars).length === 0">
+            No trucks details found
+        </div>
+        <div class="igz-scrollable-container" data-ng-if="(allCars.cars | filter:allCars.filterCars).length > 0" data-ng-scrollbars>
+            <div class="igz-row car" data-ng-repeat="car in allCars.cars | filter:allCars.filterCars | orderBy:'-modified'">
+                <div class="igz-col-{{::allCars.columnWidths.vin}} cell">
+                    <span class="car-id" title="{{::car.vin}}">{{::car.vin}}</span>
+                    <span data-ng-show="::allCars.hasAlarm(car)" class="icon-font-critical"></span>
+                </div>
+                <div class="igz-col-{{::allCars.columnWidths.t}} cell">{{::allCars.getDateString(car.modified)}}</div>
+                <div class="igz-col-{{::allCars.columnWidths.csp}} cell">{{::car.csp | number:2}}</div>
+                <div class="igz-col-{{::allCars.columnWidths.rpm}} cell">{{::car.rpm | number:0}}</div>
+                <div class="igz-col-{{::allCars.columnWidths.cfc}} cell">{{::car.cfc | number:2}}</div>
+                <div class="igz-col-{{::allCars.columnWidths.weather}} cell">
+                    <img alt="{{::car.weather}}" title="{{::car.weather}}"
+                         src="/assets/images/icons/{{::car.iconName}}.png">{{::car.weather}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

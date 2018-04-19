@@ -1,0 +1,39 @@
+title = "Fleet Management"
+
+[global]
+block_size = 5
+Duration = "36000s"
+server="10.90.1.102"
+port="8081"
+TLSMode=false
+ [global.StatusCodesAcceptance]
+  200 = 100.0 # upto 100% return status of 200
+  204 = 100.0
+  205 = 100.0
+
+[workloads]
+   [workloads.fleet-gps]
+   name="fleet GPS ingestion"
+   Generator="line2stream"
+   Container="1"
+   Target="/vin/gps/"
+   Duration = "36000s"
+   workers=2
+   lazy=100
+   shardCount=12
+   payload="/home/iguazio/fleet/producer/data/gps.more.txt"
+
+   [workloads.fleet-metrics]
+   name="fleet metrics ingestion"
+   Generator="line2stream"
+   Container="1"
+   Target="/vin/events/"
+   Duration = "36000s"
+   workers=2
+   lazy=500
+   shardCount=12
+   payload="/home/iguazio/fleet/producer/data/metrics.more.txt"
+
+
+
+

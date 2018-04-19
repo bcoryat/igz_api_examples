@@ -1,0 +1,932 @@
+//
+// Icons from the font
+//
+.igz-icon-default {
+    display: inline-block;
+    font-family: 'iguazio';
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: 1;
+    text-shadow: none;
+    text-transform: none;
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Icon class generator
+.generateIconClass(@code) {
+    &:before {
+        content: '\e@{code}';
+        &:extend(.igz-icon-default);
+    }
+}
+
+// icons (the same order as in the font file)
+.icon-font-search-1 {
+    .generateIconClass(600);
+};
+
+.icon-notifications {
+    .generateIconClass(601);
+};
+
+.icon-tasks {
+    .generateIconClass(602);
+};
+
+.icon-add {
+    .generateIconClass(603);
+};
+
+.icon-close {
+    .generateIconClass(604);
+};
+
+.icon-menu {
+    .generateIconClass(605);
+};
+
+.icon-font-arrow-right-1 {
+    .generateIconClass(606);
+};
+
+.icon-camera {
+    .generateIconClass(607);
+};
+
+.icon-copy {
+    .generateIconClass(608);
+};
+
+.icon-document {
+    .generateIconClass(609);
+};
+
+.icon-info-2 {
+    .generateIconClass(609);
+};// TODO remove and replace with icon-document
+
+.icon-download {
+    .generateIconClass(60a);
+}
+.icon-font-file {
+    .generateIconClass(60b);
+}
+.icon-folder-open {
+    .generateIconClass(60c);
+}
+
+.icon-grid-view-state {
+    .generateIconClass(60d);
+}
+
+.icon-import {
+    .generateIconClass(60e);
+}
+
+.icon-multidoc {
+    .generateIconClass(60f);
+}
+
+.icon-font-sorting {
+    .generateIconClass(610);
+}
+
+.icon-upload {
+    .generateIconClass(611);
+}
+
+.icon-trash {
+    .generateIconClass(612);
+}
+
+.icon-tag {
+    .generateIconClass(613);
+}
+
+.icon-note {
+    .generateIconClass(614);
+}
+
+.icon-scissors {
+    .generateIconClass(615);
+}
+
+.icon-info {
+    .generateIconClass(616);
+}
+
+.icon-font-folder-close {
+    .generateIconClass(617);
+}
+
+.icon-folder-add {
+    .generateIconClass(619);
+}
+
+.icon-font-read-arrow {
+    .generateIconClass(61a);
+}
+
+.icon-font-write-arrow {
+    .generateIconClass(61b);
+}
+
+.icon-encrypt-rounded {
+    .generateIconClass(61c);
+}
+
+.icon-dedup-rounded {
+    .generateIconClass(61d);
+}
+
+.icon-checksum-rounded {
+    .generateIconClass(61e);
+}
+
+.icon-zip-rounded {
+    .generateIconClass(61f);
+}
+
+.icon-order-gen {
+    .generateIconClass(620);
+}
+
+.icon-view-list {
+    .generateIconClass(621);
+}
+
+.icon-user {
+    .generateIconClass(622);
+}
+
+.icon-font-users {
+    .generateIconClass(623);
+}
+
+.icon-run {
+    .generateIconClass(626);
+}
+
+.icon-archive {
+    .generateIconClass(627);
+}
+
+.icon-font-filter {
+    .generateIconClass(628);
+}
+
+.icon-member {
+    .generateIconClass(629);
+}
+
+.icon-font-configure {
+    .generateIconClass(624);
+}
+
+.icon-font-duplicate {
+    .generateIconClass(625);
+}
+
+.icon-list-view-state {
+    .generateIconClass(630);
+}
+
+.icon-context-menu {
+    .generateIconClass(631);
+}
+
+.icon-edit {
+    .generateIconClass(632);
+}
+
+.icon-igz-storage, .icon-font-pool {
+    .generateIconClass(900);
+}
+
+.icon-igz-services {
+    .generateIconClass(901);
+}
+
+.icon-igz-reports {
+    .generateIconClass(902);
+}
+
+.icon-igz-policies {
+    .generateIconClass(903);
+}
+
+.icon-igz-networks {
+    .generateIconClass(904);
+}
+
+.icon-igz-identity {
+    .generateIconClass(905);
+}
+
+.icon-igz-help {
+    .generateIconClass(906);
+}
+
+.icon-igz-containers {
+    .generateIconClass(907);
+}
+
+.icon-igz-search {
+    .generateIconClass(908);
+}
+
+.icon-font-arrow-right-2 {
+    .generateIconClass(909);
+}
+
+.icon-font-checkbox-unchecked {
+    .generateIconClass(90a);
+}
+
+.icon-font-checkbox-checked-few {
+    .generateIconClass(90b);
+}
+
+.icon-font-checkbox-checked {
+    .generateIconClass(90c);
+}
+
+.icon-font-list-priority {
+    .generateIconClass(90d);
+}
+
+.icon-font-list-block {
+    .generateIconClass(90e);
+}
+
+.icon-font-add-rule {
+    .generateIconClass(90f);
+}
+
+.icon-font-arrow-down {
+    .generateIconClass(910);
+}
+
+.icon-font-maximize {
+    .generateIconClass(911);
+}
+
+.icon-font-minimize {
+    .generateIconClass(912);
+}
+
+.icon-font-arrow-up {
+    .generateIconClass(913);
+}
+
+.icon-font-add-2 {
+    .generateIconClass(914);
+}
+
+.icon-font-add-round {
+    .generateIconClass(915);
+}
+
+.icon-font-check-all {
+    .generateIconClass(916);
+}
+
+.icon-font-drag {
+    .generateIconClass(917);
+}
+
+.icon-font-folder {
+    .generateIconClass(918);
+}
+
+.icon-font-group {
+    .generateIconClass(919);
+}
+
+.icon-font-idle-add {
+    .generateIconClass(91a);
+}
+
+.icon-font-interface-hdfs {
+    .generateIconClass(91b);
+}
+
+.icon-font-interface-nfs {
+    .generateIconClass(91c);
+}
+
+.icon-font-layer {
+    .generateIconClass(91d);
+}
+
+.icon-font-cloud-1 {
+    .generateIconClass(91e);
+}
+
+.icon-font-cancel-1 {
+    .generateIconClass(91f);
+}
+
+.icon-font-rule {
+    .generateIconClass(920);
+}
+
+.icon-font-uncheck-all {
+    .generateIconClass(921);
+}
+
+.icon-font-view-log-1 {
+    .generateIconClass(922);
+}
+
+.icon-font-view-log-2 {
+    .generateIconClass(923);
+}
+
+.icon-font-cancel-2 {
+    .generateIconClass(924);
+}
+
+.icon-font-help {
+    .generateIconClass(925);
+}
+
+.icon-font-interface-s3 {
+    .generateIconClass(926);
+}
+
+.icon-font-limits-guarenteed {
+    .generateIconClass(927);
+}
+
+.icon-font-limits-read {
+    .generateIconClass(928);
+}
+
+.icon-font-limits-readwrite {
+    .generateIconClass(929);
+}
+
+.icon-font-limits-total {
+    .generateIconClass(92a);
+}
+
+.icon-font-limits-write {
+    .generateIconClass(92b);
+}
+
+.icon-font-cloud-2 {
+    .generateIconClass(92d);
+}
+
+.icon-font-path {
+    .generateIconClass(92e);
+}
+
+.icon-font-prioirty-real {
+    .generateIconClass(92f);
+}
+
+.icon-font-priority-time {
+    .generateIconClass(933);
+}
+
+.icon-font-type-backup {
+    .generateIconClass(934);
+}
+
+.icon-font-type-delete {
+    .generateIconClass(935);
+}
+
+.icon-font-type-migrate {
+    .generateIconClass(937);
+}
+
+.icon-font-path-light {
+    .generateIconClass(938);
+}
+
+.icon-font-type-snapshot {
+    .generateIconClass(939);
+}
+
+.icon-font-type-sync {
+    .generateIconClass(93a);
+}
+
+.icon-font-category {
+    .generateIconClass(93b);
+}
+
+.icon-font-type-store {
+    .generateIconClass(93c);
+}
+
+.icon-font-file-light {
+    .generateIconClass(93d);
+}
+
+.icon-font-type-process {
+    .generateIconClass(93e);
+}
+
+.icon-font-infinity {
+    .generateIconClass(93f);
+}
+
+.icon-font-arrow-right {
+    .generateIconClass(940);
+}
+
+.icon-font-arrow-modal {
+    .generateIconClass(941);
+}
+
+.icon-user-reader {
+    .generateIconClass(942);
+}
+
+.icon-user-owner {
+    .generateIconClass(943);
+}
+
+.icon-font-users-owners {
+    .generateIconClass(944);
+}
+
+.icon-font-star {
+    .generateIconClass(945);
+}
+
+.icon-redirect {
+    .generateIconClass(946);
+}
+
+.icon-font-edit-circle {
+    .generateIconClass(947);
+}
+
+.icon-font-delete-circle {
+    .generateIconClass(948);
+}
+
+.icon-font-restore {
+    .generateIconClass(949);
+}
+
+.icon-font-export {
+    .generateIconClass(94c);
+}
+
+.icon-font-create-view {
+    .generateIconClass(94b);
+}
+
+.icon-font-refresh {
+    .generateIconClass(94a);
+}
+
+.icon-font-file-csv {
+    .generateIconClass(94d);
+}
+
+.icon-font-primary-key {
+    .generateIconClass(94e);
+}
+
+.icon-font-partition-key {
+    .generateIconClass(94f);
+}
+
+.icon-area-chart {
+    .generateIconClass(950);
+}
+
+.icon-bar-chart {
+    .generateIconClass(953);
+}
+
+.icon-export-from {
+    .generateIconClass(952);
+}
+
+.icon-maximize-block {
+    .generateIconClass(951);
+}
+
+.icon-minimize-block {
+    .generateIconClass(954);
+}
+
+.icon-event-flag {
+    .generateIconClass(95a);
+}
+
+.icon-previous {
+    .generateIconClass(955);
+}
+
+.icon-next {
+    .generateIconClass(909);
+}
+
+.icon-font-warning {
+    .generateIconClass(957);
+};
+
+.icon-font-info {
+    .generateIconClass(958);
+};
+
+.icon-font-critical {
+    .generateIconClass(959);
+};
+
+.icon-font-container {
+    .generateIconClass(95d);
+};
+
+.icon-font-escalation {
+    .generateIconClass(95e);
+};
+
+.icon-font-hardware {
+    .generateIconClass(95c);
+};
+
+.icon-igz-clock {
+    .generateIconClass(956);
+};
+
+.icon-range-pointer {
+    .generateIconClass(95b);
+};
+
+.icon-replace {
+    .generateIconClass(95f);
+};
+
+.icon-severity-medium {
+    .generateIconClass(957);
+};
+
+.icon-severity-info {
+    .generateIconClass(958);
+};
+
+.icon-severity-critical {
+    .generateIconClass(959);
+};
+
+.icon-heart-red {
+    .generateIconClass(960);
+};
+
+.icon-heart-orange {
+    .generateIconClass(961);
+};
+
+.icon-heart-green {
+    .generateIconClass(962);
+    color: #16e07a;
+    font-size: 20px;
+};
+
+.icon-igz-clusters {
+    .generateIconClass(963);
+};
+
+.icon-igz-full-backup {
+    .generateIconClass(965);
+};
+.icon-igz-partial-backup {
+    .generateIconClass(966);
+};
+.icon-igz-unauth-access {
+    .generateIconClass(967);
+};
+.icon-font-refresh-arrows {
+    .generateIconClass(968);
+}
+
+
+[class*='icon-priority-']:before {
+    border-radius: 4px;
+    color: #ffffff;
+    display: inline-block;
+    font-size: 9px;
+    line-height: 1;
+    padding: 3px 5px;
+    text-align: center;
+    width: 32px;
+}
+
+.icon-priority-low:before {
+    background-color: #16e07a;
+    content: 'LOW';
+}
+
+.icon-priority-standard:before {
+    background-color: #e49836;
+    content: 'STD';
+}
+
+.icon-priority-high:before {
+    background-color: #e4365f;
+    content: 'HIGH';
+}
+
+.icon-priority-realtime:before {
+    background-color: #5a81a0;
+    content: 'REAL';
+}
+
+.common-table-icon {
+    &:before {
+        color: #5a81a0;
+        font-size: 15px;
+        margin: 0 5px;
+    }
+}
+
+.icon-font-read-arrow:before {
+    display: block;
+    color: #16e07a;
+}
+
+.icon-font-write-arrow:before {
+    display: block;
+    color: #e4365f;
+}
+
+.point-general {
+    display: inline-block;
+    height: 16px;
+    margin: 0 10px 0 0;
+    max-width: 4px;
+    min-width: 4px;
+    position: relative;
+}
+
+.status-up {
+    background: #16e07a;
+}
+
+.status-down {
+    background: #e4365f;
+}
+
+.latency-green {
+    background: #16e07a;
+}
+
+.latency-yellow {
+    background: #ecd749;
+}
+
+.latency-red {
+    background: #e4365f;
+}
+
+//
+// SVG icons
+//
+
+.icon-search:before {
+    background: url("/assets/images/container/icon_search.svg") no-repeat left;
+    content: "";
+    display: inline-block;
+    height: 20px;
+    width: 21px;
+}
+
+.icon-close-info:before {
+    background: url("/assets/images/icon_close_info.svg") no-repeat left;
+    background-size: 14px 14px;
+    content: "";
+    display: inline-block;
+    height: 14px;
+    width: 14px;
+}
+
+.icon-more:before {
+    background: url("/assets/images/icon_more.svg") no-repeat left;
+    background-size: 12px 18px;
+    content: "";
+    display: inline-block;
+    height: 18px;
+    width: 12px;
+}
+
+.icon-file:before {
+    background: url("/assets/images/container/icon_file.svg") no-repeat left;
+    content: "";
+    display: inline-block;
+    height: 34px;
+    width: 30px;
+}
+
+.icon-grid:before {
+    background: url("/assets/images/container/icon_grid.svg") no-repeat left;
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 17px;
+}
+
+.icon-list:before {
+    background: url("/assets/images/container/icon_list.svg") no-repeat left;
+    background-size: 19px 16px;
+    content: "";
+    display: inline-block;
+    height: 16px;
+    width: 19px;
+}
+
+.icon-folder-closed:before {
+    background: url("/assets/images/container/icon_folder_closed.svg") no-repeat left;
+    content: "";
+    display: inline-block;
+    height: 32px;
+    width: 34px;
+}
+
+.icon-s3:before {
+    background: url("/assets/images/container-overview/icon_interfaces_s3.svg") no-repeat left;
+    background-size: 14px 12px;
+    content: "";
+    display: inline-table;
+    height: 12px;
+    width: 14px;
+}
+
+.icon-nfs:before {
+    background: url("/assets/images/container-overview/icon_interfaces_nfs.svg") no-repeat left;
+    background-size: 12px 12px;
+    content: "";
+    display: inline-table;
+    height: 12px;
+    width: 12px;
+}
+
+.icon-hdfs:before {
+    background: url("/assets/images/container-overview/icon_interfaces_hdfs.svg") no-repeat left;
+    background-size: 14px 11px;
+    content: "";
+    display: inline-table;
+    height: 11px;
+    width: 14px;
+}
+
+.icon-connection:before {
+    background: url("/assets/images/icon_connection.svg") no-repeat left;
+    background-size: 12px 11px;
+    content: "";
+    display: inline-table;
+    height: 11px;
+    width: 12px;
+}
+
+.breadcrumb-right-arrow:before {
+    background: url("/assets/images/container/icon_right_arrow.svg") no-repeat left;
+    content: "";
+    display: inline-block;
+    height: 8px;
+    width: 9px;
+}
+
+.icon-read:before {
+    background: url("/assets/images/container-access-control/icon_limits_read.svg") no-repeat left;
+    background-size: 16px 17px;
+    content: "";
+    display: inline-block;
+    height: 17px;
+    width: 16px;
+}
+
+.icon-write:before {
+    background: url("/assets/images/container-access-control/icon_limits_write.svg") no-repeat left;
+    background-size: 16px 17px;
+    content: "";
+    display: inline-block;
+    height: 17px;
+    width: 16px;
+}
+
+.icon-readwrite:before {
+    background: url("/assets/images/container-access-control/icon_limits_readwrite.svg") no-repeat left;
+    background-size: 16px 17px;
+    content: "";
+    display: inline-block;
+    height: 17px;
+    width: 16px;
+}
+
+.icon-help {
+    background: url("/assets/images/container-access-control/icon_help.svg") no-repeat left;
+    background-size: 10px 10px;
+    content: "";
+    display: inline-block;
+    height: 10px;
+    width: 10px;
+}
+
+.icon-group {
+    background: url("/assets/images/icons/icn_group.svg") no-repeat left;
+    background-size: 18px 12px;
+    content: "";
+    display: inline-block;
+    height: 12px;
+    width: 18px;
+
+    &:hover {
+        background-image: url("/assets/images/icons/icn_group_hover.svg")
+    }
+}
+
+.unauth-access-attempt:before {
+    background: url("/assets/images/container-overview/icon_activity_access.svg") no-repeat left;
+    background-size: 22px 15px;
+    content: "";
+    display: inline-block;
+    height: 15px;
+    width: 22px;
+}
+
+.full-backup:before {
+    background: url("/assets/images/container-overview/icon_activity_snapshot.svg") no-repeat left;
+    background-size: 22px 14px;
+    content: "";
+    display: inline-block;
+    height: 14px;
+    width: 22px;
+}
+
+.partial-backup:before {
+    background: url("/assets/images/container-overview/icon_activity_backup.svg") no-repeat left;
+    background-size: 22px 15px;
+    content: "";
+    display: inline-block;
+    height: 15px;
+    width: 22px;
+
+}
+
+//
+// PNG icons
+//
+
+.icon-order-az:before {
+    background: url("/assets/images/container/icon_order.png") no-repeat left;
+    background-size: 17px 17px;
+    content: "";
+    display: inline-block;
+    height: 17px;
+    width: 17px;
+}
+
+//
+// 2x PNG icons
+//
+
+@media @retina-display {
+    .icon-close:before {
+        content: "";
+        display: inline-block;
+        background: url("/assets/images/icon_close@2x.png") no-repeat left;
+        background-size: 9px 8px;
+        height: 8px;
+        width: 9px;
+    }
+
+    .icon-close-info:before {
+        content: "";
+        display: inline-block;
+        background: url("/assets/images/icon_close_info@2x.png") no-repeat left;
+        background-size: 14px 14px;
+        height: 14px;
+        width: 14px;
+    }
+
+    .icon-more:before {
+        content: "";
+        display: inline-block;
+        background: url("/assets/images/icon_more.svg") no-repeat left;
+        background-size: 12px 18px;
+        height: 18px;
+        width: 12px;
+    }
+
+    .icon-order-az:before {
+        content: "";
+        display: inline-block;
+        background: url("/assets/images/container/icon_order@2x.png") no-repeat left;
+        background-size: 17px 17px;
+        height: 17px;
+        width: 17px;
+    }
+}

@@ -1,0 +1,16 @@
+<div class="dashboard-overview">
+    <div class="splash" data-ng-show="overview.loader">
+        <div class="content">{{overview.message}}</div>
+    </div>
+    <div class="panes">
+        <div class="pane big">
+            <div data-igz-regional-map="overview.trucks"></div>
+        </div>
+        <div class="pane">
+            <div igz-cars-alarms-chart></div>
+        </div>
+        <div class="pane">
+            <div data-igz-all-cars="overview.trucks"></div>
+        </div>
+    </div>
+</div>

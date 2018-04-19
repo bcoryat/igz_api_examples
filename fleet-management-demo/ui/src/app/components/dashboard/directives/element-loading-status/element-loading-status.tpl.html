@@ -1,0 +1,29 @@
+<div class="element-loading-status" data-ng-class="'loading-status-' + elementLoadingStatus.loadingStatusSize">
+    <div class="loader-wrapper" data-ng-if="elementLoadingStatus.isShowSpinner">
+        <div class="loader">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <div data-ng-if="!elementLoadingStatus.isShowSpinner && !elementLoadingStatus.isShowError">
+        <div data-ng-transclude></div>
+    </div>
+
+    <div class="loading-error" data-ng-if="elementLoadingStatus.isShowError && elementLoadingStatus.checkSize('default')">
+        <div class="sad-icon"></div>
+        <div class="loading-error-title">Oops!</div>
+        <div class="loading-error-message">
+            <span>Something has gone wrong while loading this element. Please try</span>&nbsp;<span class="refresh-page" data-ng-click="elementLoadingStatus.refreshPage($event)">refreshing this screen</span>.
+        </div>
+    </div>
+
+    <div class="loading-error" data-ng-if="elementLoadingStatus.isShowError && elementLoadingStatus.checkSize('small')">
+        <div class="loading-error-title">Oops!</div>
+        <div class="loading-error-message">
+            <div>Try to</div>
+            <div class="refresh-page" data-ng-click="elementLoadingStatus.refreshPage($event)" title="refresh this screen">refresh this screen</div>
+        </div>
+    </div>
+</div>

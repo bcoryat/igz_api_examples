@@ -1,0 +1,16 @@
+<div class="regional-map">
+    <h3 class="pull-left">Weather and vehicles congestion map</h3>
+    <div class="pull-right toggles">
+        <div class="pull-right">
+            <input type="checkbox" id="heatmap-toggle" class="blue" data-ng-model="regionalMap.layers.overlays.heat.visible">
+            <label for="heatmap-toggle" class="label">Heatmap</label>
+        </div>
+        <div class="pull-right">
+            <input type="checkbox" id="weather-toggle" class="blue" data-ng-model="regionalMap.layers.overlays.weather.visible">
+            <label for="weather-toggle" class="label">Weather</label>
+        </div>
+    </div>
+    <div class="map-container">
+        <leaflet lf-center="regionalMap.center" layers="regionalMap.layers" markers="regionalMap.markers" height="100%" width="100%"></leaflet>
+    </div>
+</div>

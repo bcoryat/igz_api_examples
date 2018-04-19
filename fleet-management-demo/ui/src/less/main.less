@@ -1,0 +1,147 @@
+html {
+    height: 100%;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    height: 100%;
+    min-width: 1024px;
+    background: #3d5b77;
+
+    > .container-fluid {
+        background: #3d5b77;
+        min-height: 100%;
+        padding-bottom: 15px;
+    }
+
+    > .no-overflow {
+        overflow: hidden;
+    }
+
+    &.login, &.forgot-password, &.reset-password {
+        .container-fluid {
+            background: #e7edf0;
+        }
+    }
+}
+
+.igz-scrollable-container {
+    height: 100%;
+}
+
+h1, h2, h3, h4, h5, h6, .title, .btn {
+    font-family: @font-family-sans-serif-title;
+}
+
+.row {
+    margin: 0;
+}
+
+.btn-xs {
+    font-weight: 500;
+    padding: 0 2em;
+    line-height: 1.7;
+}
+
+.btn.sqrd {
+    border-radius: 0;
+}
+
+.dropdown-menu.compact {
+    > li {
+        padding: 0;
+
+        > a {
+            line-height: 1.5;
+        }
+    }
+}
+
+#main-content {
+    padding: 6rem 0 0;
+
+    header {
+        padding: 11px 0 10px;
+
+        .breadcrumbs {
+            color: #fff;
+            font-weight: 400;
+            font-size: 1.2em;
+        }
+
+        [class^="sprite-"], [class*=" sprite-"] {
+            margin: 0 5px 0 0;
+        }
+        span {
+            vertical-align: middle;
+        }
+    }
+}
+
+.mCSB_inside {
+    > .mCSB_container {
+        margin-bottom: 0 !important;
+        margin-right: 0 !important;
+    }
+    > .mCS-dark.mCSB_scrollTools {
+        .mCSB_dragger_bar {
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+    }
+    .mCSB_draggerRail {
+        display: none;
+    }
+}
+
+#welcome-wrapper {
+    margin: auto;
+    width: 500px;
+}
+
+.modal-backdrop {
+    position: absolute;
+    bottom: 0;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: @modal-backdrop-bg;
+}
+
+._login-modal .modal-dialog {
+    width: 490px;
+    margin-top: 172px;
+}
+
+.no-padding {
+	padding: 0 !important;
+}
+
+.tooltip {
+    transition-duration: 0s;
+    z-index: 9999;
+
+    &.top .tooltip-arrow {
+        border-top-color: #2d3640;
+    }
+    &.right .tooltip-arrow {
+        border-right-color: #2d3640;
+    }
+    &.bottom .tooltip-arrow {
+        border-bottom-color: #2d3640;
+    }
+    &.left .tooltip-arrow {
+        border-left-color: #2d3640;
+    }
+
+    .tooltip-inner {
+        background-color: #2d3640;
+        color: #a5cdf1;
+        border-radius: 0;
+        box-shadow: 0 1px 8px grey;
+    }
+}

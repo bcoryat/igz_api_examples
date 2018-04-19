@@ -1,0 +1,96 @@
+.all-cars {
+  height: 100%;
+
+  .icon-font-critical {
+    color: #e4365f;
+    padding: 5px;
+  }
+
+  .title-filter-headers {
+    height: 72px;
+  }
+
+  .list-container {
+    width: 100%;
+    height: ~'calc(100% - 72px)';
+    overflow: hidden;
+
+    .car {
+      width: 100%;
+      border-bottom: 1px solid #d7e7f7;
+
+      &:nth-of-type(odd) {
+        background-color: #F0FAFF;
+      }
+
+      &.ng-enter, &.ng-move {
+        @transition: 0.0s linear all;
+        -webkit-transition: @transition;
+           -moz-transition: @transition;
+             -o-transition: @transition;
+                transition: @transition;
+        opacity: 0;
+      }
+
+      &.ng-enter.ng-enter-active,
+      &.ng-move.ng-move-active {
+        opacity: 1;
+      }
+
+      &.ng-leave {
+        @animation: 0.0s opacity_1_to_0;
+        -webkit-animation: @animation;
+           -moz-animation: @animation;
+             -o-animation: @animation;
+                animation: @animation;
+      }
+
+      @keyframes opacity_1_to_0 {
+        from { opacity: 1; }
+        to { opacity: 0; }
+      }
+    }
+  }
+
+  .cell {
+    font-weight: 400;
+    padding: 5px;
+    color: #2a5272;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow-x: hidden;
+
+    .car-id {
+      font-weight: 800;
+    }
+
+    img {
+      height: 20px;
+    }
+  }
+
+  .headers {
+    padding-top: 7px;
+    width: 100%;
+
+    .cell {
+      border-top: 1px solid #b7c7d7;
+      border-bottom: 2px solid #b7c7d7;
+      color: #5a82a2;
+    }
+  }
+
+  .filter-alarm {
+    margin-top: 4px;
+    margin-left: 50px;
+
+    .label {
+      color: #3d5b77;
+      cursor: pointer;
+      font-family: 'Roboto', sans-serif;
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 23px;
+    }
+  }
+}

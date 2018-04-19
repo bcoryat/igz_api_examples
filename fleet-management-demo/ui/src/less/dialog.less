@@ -1,0 +1,33 @@
+.ngdialog-theme-iguazio {
+    @animation-duration: 0.2s;
+    @animation-function: ease;
+
+    .ngdialog-content {
+        background: #f9f9f9;
+        position: absolute;
+        padding: 30px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.15);
+        animation-duration: @animation-duration;
+        animation-timing-function: @animation-function;
+        .translate3d-anti-blur-fix();
+    }
+
+    &.ngdialog.ngdialog-closing .ngdialog-content {
+        animation-duration: @animation-duration;
+        animation-timing-function: @animation-function;
+    }
+
+    .ngdialog-overlay {
+        background: rgba(37, 45, 54, 0.9);
+        animation-duration: @animation-duration;
+        animation-timing-function: @animation-function;
+    }
+
+    &.ngdialog.ngdialog-closing .ngdialog-overlay {
+        animation-duration: @animation-duration;
+        animation-timing-function: @animation-function;
+    }
+}

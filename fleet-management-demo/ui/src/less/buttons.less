@@ -1,0 +1,185 @@
+//
+// Common styles for buttons
+//
+
+[class^="igz-button"], [class*="igz-button"] {
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    white-space: nowrap;
+    text-decoration: none;
+    height: 38px;
+    line-height: 38px;
+    border-radius: 3px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: @font-family-sans-serif-title;
+    outline: 0;
+    border: 0;
+    padding: 0 15px;
+    margin: 0;
+
+    &:active {
+        box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    }
+
+    &:hover, &:active, &focus {
+        outline: 0;
+    }
+
+    &.small {
+        font-size: 13px;
+        line-height: 22px;
+        height: 22px;
+    }
+
+    &.inverted {
+        background-color: transparent;
+        border: 1px solid #B9BEC4;
+        color: #B9BEC4;
+
+        &:hover {
+            border-color: #fff;
+            color: #fff;
+        }
+    }
+}
+
+.igz-button-primary {
+    background-color: #00c9ff;
+    color: #ffffff;
+
+    &:active {
+        background-color: #3bd6ff;
+    }
+
+    &:hover {
+        background-color: #3bd6ff;
+    }
+}
+
+.igz-button-secondary {
+    background-color: #54bdb5;
+    color: #ffffff;
+
+    &:active {
+        background-color: #52DED3;
+    }
+
+    &:hover {
+        background-color: #52DED3;
+    }
+}
+
+.igz-button-basic {
+    background-color: #ffffff;
+    color: #3d5b77;
+    border: 1px solid #d7d7d7;
+
+    &:active {
+        color: #3bd6ff;
+    }
+
+    &:hover {
+        color: #6492b7;
+    }
+}
+
+.igz-button-outline {
+    background-color: #ffffff;
+    border: 1px solid #3d5b77;
+    color: #3d5b77;
+    font-weight: 400;
+    padding: 0 35px;
+
+    &:hover {
+        color: #252d36;
+        border-color: #3d5b77;
+    }
+}
+
+.igz-button-square-icon {
+    font-family: 'iguazio';
+    padding: 0;
+    width: 38px;
+    background-color: #ffffff;
+    color: #4b6c8b;
+    border: 1px solid #d7d7d7;
+
+    &:active {
+        color: #3bd6ff;
+    }
+
+    &:hover {
+        color: #2d3640;
+    }
+}
+
+.igz-button-just-text {
+    color:  #3d5b77;
+    background-color: transparent;
+
+    &:active {
+        box-shadow: none;
+        color: #3bd6ff;
+    }
+
+    &:focus {
+        color: #6492b7;
+    }
+
+    &:hover {
+        color: #6492b7;
+    }
+
+    &.small {
+        font-size: 13px;
+        line-height: 22px;
+        height: 22px;
+    }
+}
+
+
+//
+// Button groups
+//
+
+.igz-grouped-buttons {
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+
+    [class^="igz-button"], [class*="igz-button"] {
+        border-radius: 0;
+    }
+
+    [class^="igz-button"]:first-child:not(:last-child):not(.dropdown-toggle),
+    [class*="igz-button"]:first-child:not(:last-child):not(.dropdown-toggle) {
+        border-top-left-radius: 3px;
+        border-bottom-left-radius: 3px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    [class^="igz-button"]:last-child:not(:first-child),
+    [class*="igz-button"]:last-child:not(:first-child) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    .dropdown-toggle:not(:first-child) {
+        border-left: 1px solid #00b1e1;
+
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+    }
+
+    .caret {
+        margin: 0;
+    }
+}
